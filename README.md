@@ -1,22 +1,22 @@
-# hyperswarm
+# dwswarm
 
 A high-level API for finding and connecting to peers who are interested in a "topic."
 
 ```
-npm install hyperswarm
+npm install dwswarm
 ```
 
 ## Usage
 
 ```js
-const hyperswarm = require('hyperswarm')
+const dwswarm = require('dwswarm')
 const crypto = require('crypto')
 
-const swarm = hyperswarm()
+const swarm = dwswarm()
 
 // look for peers listed under this topic
 const topic = crypto.createHash('sha256')
-  .update('my-hyperswarm-topic')
+  .update('my-dwswarm-topic')
   .digest()
 
 swarm.join(topic, {
@@ -34,7 +34,7 @@ swarm.on('connection', (socket, details) => {
 
 ## API
 
-#### `swarm = hyperswarm([options])`
+#### `swarm = dwswarm([options])`
 
 Create a new network instance
 
@@ -112,7 +112,7 @@ Leave the swarm for the given topic.
 
 #### `swarm.connect(peer, (err, socket, details) => {})`
 
-Establish a connection to the given peer. You usually won't need to use this function, because hyperswarm connects to found peers automatically.
+Establish a connection to the given peer. You usually won't need to use this function, because dwswarm connects to found peers automatically.
 
  - `peer`. The object emitted by the `'peer'` event.
  - `cb`. Function.

@@ -2,7 +2,7 @@
 const peerInfo = require('./lib/peer-info')
 const peerQueue = require('./lib/queue')
 const { EventEmitter } = require('events')
-const network = require('@hyperswarm/network')
+const network = require('dwswarm-network')
 
 const MAX_SERVER_SOCKETS = Infinity
 const MAX_CLIENT_SOCKETS = Infinity
@@ -12,12 +12,12 @@ const ERR_DESTROYED = 'swarm has been destroyed'
 const ERR_MISSING_KEY = 'key is required and must be a buffer'
 const ERR_JOIN_OPTS = 'join options must enable lookup, announce or both, but not neither'
 
-const kDrain = Symbol('hyperswarm.drain')
-const kIncrPeerCount = Symbol('hyperswarm.incrPeerCount')
-const kDecrPeerCount = Symbol('hyperswarm.decrPeerCount')
-const kQueue = Symbol('hyperswarm.queue')
-const kLeave = Symbol('hyperswarm.leave')
-const kFlush = Symbol('hyperswarm.flush')
+const kDrain = Symbol('dwswarm.drain')
+const kIncrPeerCount = Symbol('dwswarm.incrPeerCount')
+const kDecrPeerCount = Symbol('dwswarm.decrPeerCount')
+const kQueue = Symbol('dwswarm.queue')
+const kLeave = Symbol('dwswarm.leave')
+const kFlush = Symbol('dwswarm.flush')
 
 module.exports = opts => new Swarm(opts)
 
