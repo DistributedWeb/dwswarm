@@ -1,11 +1,11 @@
 {
   "name": "dwswarm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A distributed networking stack for connecting peers",
   "main": "swarm.js",
   "dependencies": {
-    "dwswarm-discovery": "^1.0.0",
-    "dwswarm-network": "^1.0.0",
+    "dwswarm-discovery": "1.0.0",
+    "dwswarm-network": "1.0.0",
     "shuffled-priority-queue": "^2.1.0",
     "utp-native": "^2.1.3"
   },
