@@ -1,8 +1,8 @@
 'use strict'
 const { inspect } = require('util')
-const hyperswarm = require('./')
+const dwswarm = require('./')
 const crypto = require('crypto')
-const swarm = hyperswarm({
+const swarm = dwswarm({
   announceLocalAddress: true
 })
 
